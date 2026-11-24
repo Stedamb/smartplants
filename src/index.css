@@ -38,49 +38,52 @@
     -webkit-text-size-adjust: 100%;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+/* Element defaults go in the base layer so Tailwind classes (text sizes, hover colours) can override them. */
+@layer base {
+    ::-webkit-scrollbar {
+        display: none;
+    }
   
-body {
-    font-family: 'Poppins';
-    font-weight: 400;
+    body {
+        font-family: 'Poppins';
+        font-weight: 400;
 
-    margin: 0;
-    min-width: 320px;
-    min-height: 100vh;
-}
+        margin: 0;
+        min-width: 320px;
+        min-height: 100vh;
+    }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-}
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+    }
 
-html {font-size: 14px;} /* 12px */
+    html {font-size: 14px;} /* 12px */
 
-@media screen and (min-width: 768px) {
-    html {font-size: 16px;} /* 16px */
-}
+    @media screen and (min-width: 768px) {
+        html {font-size: 16px;} /* 16px */
+    }
 
-h1 {font-size: 4.210rem; /* 67.36px */}
+    h1 {font-size: 4.210rem; /* 67.36px */}
 
-h2 {font-size: 3.158rem; /* 50.56px */}
+    h2 {font-size: 3.158rem; /* 50.56px */}
 
-h3 {font-size: 2.369rem; /* 37.92px */}
+    h3 {font-size: 2.369rem; /* 37.92px */}
 
-h4 {font-size: 1.777rem; /* 28.48px */}
+    h4 {font-size: 1.777rem; /* 28.48px */}
 
-h5 {font-size: 1.55rem; /* 24.8px */}
+    h5 {font-size: 1.55rem; /* 24.8px */}
 
-h6 {font-size: 1.333rem; /* 21.28px */}
+    h6 {font-size: 1.333rem; /* 21.28px */}
 
-small {font-size: 0.750rem; /* 12px */}
+    small {font-size: 0.750rem; /* 12px */}
 
-a {
-    text-decoration: inherit;
-}
+    a {
+        text-decoration: inherit;
+    }
 
-a:hover {
-    color: var(--accent);
+    a:hover {
+        color: var(--accent);
+    }
 }
 
 
