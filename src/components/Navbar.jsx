@@ -6,6 +6,24 @@ import {useTranslation} from "react-i18next";
 import {styles} from "../styles";
 import {navLinks} from "../constants";
 import {logo} from "../assets";
+import {LANGUAGES} from "../i18n";
+
+// Flags for the languages other than the current one.
+const LanguageFlags = () => {
+    const {i18n} = useTranslation();
+    return LANGUAGES
+        .filter((lang) => lang.code !== i18n.resolvedLanguage)
+        .map((lang) => (
+            <button key={lang.code} type="button" onClick={() => i18n.changeLanguage(lang.code)} title={lang.label}>
+                <img
+                    src={`https://flagcdn.com/28x21/${lang.flag}.png`}
+                    srcSet={`https://flagcdn.com/56x42/${lang.flag}.png 2x, https://flagcdn.com/84x63/${lang.flag}.png 3x`}
+                    width="28"
+                    height="21"
+                    alt={lang.label}/>
+            </button>
+        ));
+};
 
 const Navbar = () => {
 
@@ -147,36 +165,9 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-                    <a
-                        className="hidden sm:flex"
-                        onClick={() => {
-                        if (i18n.resolvedLanguage === 'en') {
-                            i18n.changeLanguage('it');
-                        } else {
-                            i18n.changeLanguage('en');
-                        }
-                    }}>
-                        <img
-                            className={i18n.resolvedLanguage === 'en'
-                            ? 'hidden'
-                            : 'flex'}
-                            src="https://flagcdn.com/28x21/gb.png"
-                            srcset="https://flagcdn.com/56x42/gb.png 2x,
-                        https://flagcdn.com/84x63/gb.png 3x"
-                            width="28"
-                            height="21"
-                            alt="United Kingdom"/>
-                        <img
-                            className={i18n.resolvedLanguage === 'it'
-                            ? 'hidden'
-                            : 'flex'}
-                            src="https://flagcdn.com/28x21/it.png"
-                            srcset="https://flagcdn.com/56x42/it.png 2x,
-                        https://flagcdn.com/84x63/it.png 3x"
-                            width="28"
-                            height="21"
-                            alt="Italy"/>
-                    </a>
+                    <div className="hidden sm:flex gap-3">
+                        <LanguageFlags />
+                    </div>
                 </div>
 
                 <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -239,34 +230,8 @@ const Navbar = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="flex gap-4">
-                            <a
-                                className="sm:hidden"
-                                onClick={() => {
-                                i18n.changeLanguage('en');
-                            }}>
-                                <img
-                                    src="https://flagcdn.com/28x21/gb.png"
-                                    srcset="https://flagcdn.com/56x42/gb.png 2x,
-                        https://flagcdn.com/84x63/gb.png 3x"
-                                    width="28"
-                                    height="21"
-                                    alt="United Kingdom"/>
-                            </a>
-                            <span className="text-white">|</span>
-                            <a
-                                className="sm:hidden"
-                                onClick={() => {
-                                i18n.changeLanguage('it');
-                            }}>
-                                <img
-                                    src="https://flagcdn.com/28x21/it.png"
-                                    srcset="https://flagcdn.com/56x42/it.png 2x,
-                                    https://flagcdn.com/84x63/it.png 3x"
-                                    width="28"
-                                    height="21"
-                                    alt="Italy"/>
-                            </a>
+                        <div className="flex gap-4 sm:hidden">
+                            <LanguageFlags />
                         </div>
                     </motion.div>
                 </div>

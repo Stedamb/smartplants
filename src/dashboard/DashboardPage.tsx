@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
+import { LANGUAGES } from '../i18n'
 import { HistoryChart } from './components/HistoryChart'
 import { OwnerPanel } from './components/OwnerPanel'
 import { StatusCards } from './components/StatusCards'
@@ -22,9 +23,11 @@ export default function DashboardPage({ demo }: { demo: boolean }) {
             <Link to={demo ? '/dashboard' : '/dashboard/demo'} className="text-white underline">
               {demo ? t('dash_go_live') : t('dash_go_demo')}
             </Link>
-            <button onClick={() => void i18n.changeLanguage(i18n.language.startsWith('it') ? 'en' : 'it')} className="uppercase">
-              {i18n.language.startsWith('it') ? 'en' : 'it'}
-            </button>
+            {LANGUAGES.filter((lang) => lang.code !== i18n.resolvedLanguage).map((lang) => (
+              <button key={lang.code} onClick={() => void i18n.changeLanguage(lang.code)} className="uppercase" title={lang.label}>
+                {lang.code}
+              </button>
+            ))}
           </nav>
         </div>
       </header>

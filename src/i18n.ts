@@ -4,6 +4,13 @@ import {initReactI18next} from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+/** Languages offered in the switchers; `flag` is the flagcdn.com country code. */
+export const LANGUAGES = [
+    { code: 'it', flag: 'it', label: 'Italiano' },
+    { code: 'en', flag: 'gb', label: 'English' },
+    { code: 'de', flag: 'de', label: 'Deutsch' },
+] as const;
+
 i18n
     .use(Backend)
     .use(LanguageDetector)
@@ -11,6 +18,7 @@ i18n
     .init({
         lng: 'it', // La lingua predefinita
         fallbackLng: 'it', // Lingua di fallback
+        supportedLngs: LANGUAGES.map((l) => l.code),
         debug: false,
 
         interpolation: {
@@ -31,7 +39,7 @@ i18n
                 // about
                 intro_subtitle: "INTRODUCTION",
                 intro_title: "How it works",
-                intro_text: "SmartPlants can measure the moisture level in the soil, and decide when it is time to water your favourite plant."
+                intro_text: "SmartPlants can measure the moisture level in the soil, and decide when it is time to water your favourite plant. "
                 + "The system is fully customisable and expandable: the ESP8266 chip can be connected to various sensors, capable of acquiring data such as temperature, light, etc., and can communicate the acquired data via a screen or a Bluetooth or WiFi connection.",
                 // cards
                 card1: "Automatic irrigation",
@@ -102,6 +110,90 @@ i18n
                 copyright: "© 2023–2026 Stefano D'Ambrosio"
             }
         },
+        de: {
+            translation: {
+                // hero
+                title_highlighted: "Grüner Daumen",
+                subtitle: "ohne einen Finger zu rühren",
+                // navbar
+                about: "So funktioniert's",
+                work: "Arbeit",
+                contact: "Kontakt",
+                projects: "Projekte",
+                // about
+                intro_subtitle: "EINFÜHRUNG",
+                intro_title: "Funktionen",
+                intro_text: "SmartPlants misst die Feuchtigkeit der Erde und entscheidet, wann deine Lieblingspflanze gegossen werden muss. "
+                + "Das System ist vollständig anpassbar und erweiterbar: Der ESP8266-Chip lässt sich mit verschiedenen Sensoren verbinden, etwa für Temperatur oder Licht, und kann die Messwerte über ein Display, Bluetooth oder WLAN ausgeben.",
+                // cards
+                card1: "Automatische Bewässerung",
+                card2: "Für jede Pflanze geeignet",
+                card3: "Erweiterbar und anpassbar",
+                card4: "Drahtlose Verbindung",
+                // work
+                work_subtitle: "PROJEKTE",
+                work_title: "Einige Ideen",
+                work_text: "Hier sind einige der bisher umgesetzten Projekte, die Liste wird laufend ergänzt. Für individuelle Projekte besuche das Profil auf ",
+                project1: "Bewässerungssystem mit Feuchtigkeitssensor",
+                project2: "Individuelles System mit Feuchtigkeitsanzeige, Summer und Display",
+                project3: "Chip, Sensor und Wasserpumpe: für jede Pflanze, die du magst!",
+                // contact
+                contact_subtitle: "KONTAKT",
+                contact_title: "Schreib mir",
+                contact_name: "Dein Name",
+                contact_email: "Deine E-Mail-Adresse",
+                contact_message: "Deine Nachricht",
+                contact_send: "Senden",
+                contact_sending: "Wird gesendet...",
+                // footer
+                footer_text: "Ein DIY-System zur Pflanzenpflege: ein ESP8266, der die Erde misst und deine Pflanze gießt, mit einem Live-Dashboard.",
+                footer_links: "Nützliche Links",
+                dashboard: "Dashboard",
+                dashboard_demo: "Demo-Dashboard",
+                source_code: "Quellcode",
+                firmware: "Firmware",
+                dash_moisture: "Bodenfeuchtigkeit",
+                dash_level_dry: "Trocken: das Board gießt",
+                dash_level_warning: "Wird trocken",
+                dash_level_ok: "Gut gegossen",
+                dash_board: "Board",
+                dash_online: "Online",
+                dash_offline: "Offline",
+                dash_last_seen: "Letzte Messung",
+                dash_never: "nie",
+                dash_pump: "Pumpe",
+                dash_pump_on: "Läuft",
+                dash_pump_off: "Aus",
+                dash_thresholds: "Schwellen trocken / Warnung",
+                dash_environment: "Umgebung",
+                dash_no_sensor: "Kein Lichtsensor",
+                dash_history: "Letzte 24 Stunden",
+                dash_no_history: "Keine Messungen in den letzten 24 Stunden.",
+                dash_controls: "Steuerung",
+                dash_login_hint: "Gießen und Schwellen sind dem Besitzer vorbehalten. Die Messwerte oben sind öffentlich.",
+                dash_sign_in: "Anmelden",
+                dash_sign_out: "Abmelden",
+                dash_signed_in: "Angemeldet.",
+                dash_water_hint: "Schaltet die Pumpe einmal für 3 Sekunden ein.",
+                dash_water_now: "Jetzt gießen",
+                dash_water_sent: "Gesendet: das Board gießt bei der nächsten Synchronisierung.",
+                dash_dry_threshold: "Trocken unter (%)",
+                dash_warning_threshold: "Warnung unter (%)",
+                dash_save: "Schwellen speichern",
+                dash_thresholds_saved: "Schwellen gespeichert: das Board übernimmt sie bei der nächsten Synchronisierung.",
+                dash_error_thresholds_order: "Die Trocken-Schwelle muss niedriger sein als die Warnschwelle.",
+                dash_error_thresholds_range: "Verwende ganze Zahlen zwischen 0 und 100.",
+                dash_error_action: "Das hat nicht geklappt. Versuch es noch einmal.",
+                dash_error_load: "Das Dashboard konnte nicht geladen werden. Versuch es später noch einmal.",
+                dash_loading: "Wird geladen…",
+                dash_empty: "Noch kein Board registriert.",
+                dash_demo_banner: "Demo mit simulierten Daten: die Pflanze trocknet aus, die Pumpe springt an, und die Steuerung verändert die Simulation.",
+                dash_fallback_banner: "Live-Daten sind hier nicht eingerichtet, daher siehst du simulierte Daten.",
+                dash_go_demo: "Demo",
+                dash_go_live: "Echte Pflanze",
+                copyright: "© 2023–2026 Stefano D'Ambrosio"
+            }
+        },
         it: {
             translation: {
                 // hero
@@ -115,7 +207,7 @@ i18n
                 // about
                 intro_subtitle: "INTRODUZIONE",
                 intro_title: "Funzionalità",
-                intro_text: "SmartPlants è in grado di misurare il livello di umidità del terreno, e decidere quanto è ora di annaffiare la tua pianta preferita."
+                intro_text: "SmartPlants è in grado di misurare il livello di umidità del terreno, e decidere quanto è ora di annaffiare la tua pianta preferita. "
                 + "Il sistema è totalmente personalizzabile ed espandibile: il chip ESP8266 può essere collegato a vari sensori, in grado di acquisire dati come temperatura, luce, ecc. e può comunicare i dati acquisiti attraverso uno schermo oppure una connessione Bluetooth o WiFi.",
                 // + "Infine, è possibile controllare i vari componenti da remoto grazie alla connettività wireless.",
                 // cards
