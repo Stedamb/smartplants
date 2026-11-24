@@ -20,7 +20,7 @@ export function StatusCards({ device, now }: { device: DeviceStatus; now: number
         </p>
         {level && <p className="mt-1 text-sm">{t(`dash_level_${level}`)}</p>}
         {last && (
-          <div className="mt-4 h-2 w-full bg-[var(--tertairy)]" aria-hidden>
+          <div className="mt-4 h-2 w-full bg-[var(--track)]" aria-hidden>
             <div className="h-2" style={{ width: `${last.moisturePct}%`, background: level ? levelColor[level] : undefined }} />
           </div>
         )}

@@ -14,7 +14,7 @@ export default function DashboardPage({ demo }: { demo: boolean }) {
   const isMock = source.kind === 'mock'
 
   return (
-    <div className="min-h-screen bg-[var(--tertairy)]">
+    <div className="min-h-screen bg-[var(--surface)]">
       <header className="bg-[var(--primary)] text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 sm:px-16">
           <Link to="/" className="font-bold text-white hover:text-white">SmartPlants</Link>
