@@ -31,7 +31,7 @@ i18n
                 // hero
                 title_highlighted: "Green thumb",
                 subtitle: "without having to lift a finger",
-                hero_cta: "See the live plant",
+                hero_cta: "See the dashboard",
                 // navbar
                 about: "About",
                 work: "Work",
@@ -116,7 +116,7 @@ i18n
                 // hero
                 title_highlighted: "Grüner Daumen",
                 subtitle: "ohne einen Finger zu rühren",
-                hero_cta: "Zur Live-Pflanze",
+                hero_cta: "Zum Dashboard",
                 // navbar
                 about: "So funktioniert's",
                 work: "Arbeit",
@@ -201,7 +201,7 @@ i18n
                 // hero
                 title_highlighted: "Pollice verde",
                 subtitle: "senza alzare un dito",
-                hero_cta: "Guarda la pianta dal vivo",
+                hero_cta: "Guarda la dashboard",
                 // navbar
                 about: "Come funziona",
                 work: "Lavoro",
