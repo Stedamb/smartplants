@@ -17,6 +17,8 @@
     --primary: #356e48;
     --secondary: #b6e2837c;
     --tertairy: #d9e6ed;
+    --cta: #b6e283;        /* hero button: the cards' light green, opaque */
+    --cta-hover: #a2d46a;
     --surface: #f7f7f5;  /* dashboard page background */
     --track: #e7e7e3;    /* empty part of the moisture bar */
     --accent: #51a96e;

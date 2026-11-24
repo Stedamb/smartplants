@@ -19,7 +19,7 @@ const Hero = () => {
                 </p>
                 <Link
                     to="/dashboard"
-                    className="mt-10 bg-[var(--primary)] px-8 py-4 text-lg font-bold text-white hover:bg-[var(--accent)] hover:text-white">
+                    className="mt-10 rounded-[20px] bg-[var(--cta)] px-8 py-4 text-lg font-bold text-[var(--text)] transition-colors duration-200 hover:bg-[var(--cta-hover)] hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
                     {t("hero_cta")}
                 </Link>
             </div>
