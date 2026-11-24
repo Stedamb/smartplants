@@ -1,27 +1,38 @@
-# React + TypeScript + Vite
+# SmartPlants
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Green thumb, without lifting a finger.**
 
-Currently, two official plugins are available:
+SmartPlants is a small DIY system for automatic plant care. An ESP8266 board reads a soil moisture sensor and turns on a water pump when the soil gets too dry. Because the board is modular, you can add sensors for temperature, light and other readings, and send the data to a screen, over Bluetooth or over WiFi.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository holds the project's website: a bilingual (Italian and English) landing page that explains how the system works and shows the builds made so far.
 
-## Expanding the ESLint configuration
+**Live:** https://smart-plants.vercel.app
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## The hardware
 
-- Configure the top-level `parserOptions` property like this:
+| Build | What it does |
+| --- | --- |
+| Base | Irrigation driven by a soil moisture sensor |
+| Custom | Moisture indicators, a buzzer and a screen |
+| Irrigation only | Board, sensor and water pump, for any plant |
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+Every build starts from the same core: an ESP8266 board, a soil moisture sensor and a small water pump.
+
+## The website
+
+- React 18, Vite and TypeScript
+- Tailwind CSS for styling, Framer Motion for animations
+- i18next for Italian and English, with Italian as the default
+- EmailJS for the contact form
+- Deployed on Vercel
+
+### Run it locally
+
+```bash
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Roadmap
+
+The next step is a **live dashboard**: the ESP sends its sensor readings over WiFi, and the web app shows moisture, temperature and light in real time, keeps a history and lets you water a plant remotely. The landing page stays as the public front.
