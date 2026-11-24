@@ -23,7 +23,6 @@ i18n
                 // hero
                 title_highlighted: "Green thumb",
                 subtitle: "without having to lift a finger",
-                subtitle_highlighted: "",
                 // navbar
                 about: "About",
                 work: "Work",
@@ -108,7 +107,6 @@ i18n
                 // hero
                 title_highlighted: "Pollice verde",
                 subtitle: "senza alzare un dito",
-                subtitle_highlighted: "",
                 // navbar
                 about: "Come funziona",
                 work: "Lavoro",
