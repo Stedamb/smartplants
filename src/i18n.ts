@@ -11,7 +11,7 @@ i18n
     .init({
         lng: 'it', // La lingua predefinita
         fallbackLng: 'it', // Lingua di fallback
-        debug: true,
+        debug: false,
 
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
@@ -55,9 +55,13 @@ i18n
                 contact_send: "Send",
                 contact_sending: "Sending...",
                 // footer
-                footer_text: "Enjoy",
+                footer_text: "A DIY plant-care system: an ESP8266 that measures the soil and waters your plant, with a live dashboard.",
                 footer_links: "Useful links",
-                copyright: "Copyright Ⓒ 2023"
+                dashboard: "Dashboard",
+                dashboard_demo: "Demo dashboard",
+                source_code: "Source code",
+                firmware: "Firmware",
+                copyright: "© 2023–2026 Stefano D'Ambrosio"
             }
         },
         it: {
@@ -98,9 +102,13 @@ i18n
                 contact_send: "Invia",
                 contact_sending: "Invio...",
                 // footer
-                footer_text: "\‟Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nibh nec erat tincidunt, vitae viverra nunc.\"",
+                footer_text: "Un sistema fai da te per la cura delle piante: un ESP8266 che misura il terreno e annaffia la tua pianta, con una dashboard dal vivo.",
                 footer_links: "Link utili",
-                copyright: "Copyright Ⓒ 2023"
+                dashboard: "Dashboard",
+                dashboard_demo: "Dashboard demo",
+                source_code: "Codice sorgente",
+                firmware: "Firmware",
+                copyright: "© 2023–2026 Stefano D'Ambrosio"
             }
         }
     }

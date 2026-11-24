@@ -5,7 +5,7 @@ import {SectionWrapper} from "../hoc";
 import {useTranslation} from "react-i18next";
 
 const Footer = () => {
-    const {i18n, t} = useTranslation();
+    const {t} = useTranslation();
 
     return (
         <section className="bg-[color:var(--primary)] pt-12 mt-8"> 
@@ -23,8 +23,8 @@ const Footer = () => {
                             <h5 className="text-white">
                                 {t("footer_links")}
                             </h5>
-                            {footerLinks.map((footerlink) => (
-                                <ul className="list-none mt-4">
+                            {footerLinks.map((footerlink, i) => (
+                                <ul key={i} className="list-none mt-4">
                                     {footerlink
                                         .links
                                         .map((link, index) => (
@@ -33,7 +33,7 @@ const Footer = () => {
                                                 className={`text-white hover:text-slate-300 cursor-pointer ${index !== footerlink.links.length - 1
                                                 ? "mb-4"
                                                 : "mb-6"}`}>
-                                                {link.name}
+                                                <a href={link.link}>{t(link.name)}</a>
                                             </li>
                                         ))}
                                 </ul>

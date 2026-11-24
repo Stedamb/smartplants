@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 // import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 

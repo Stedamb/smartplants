@@ -20,6 +20,10 @@ export const navLinks = [
     }, {
         id: "contact",
         title: "Contact"
+    }, {
+        id: "dashboard",
+        title: "Dashboard",
+        href: "/dashboard"
     }
 ];
 
@@ -48,17 +52,17 @@ const projects = [
         name: "Base",
         description: "project1",
         image: bg,
-        source_code_link: "http://clearedtoplay.it"
+        source_code_link: "https://github.com/Stedamb/smartplants"
     }, {
         name: "Custom",
         description: "project2",
         image: hero,
-        source_code_link: "http://daleninbarbershop.it"
+        source_code_link: "https://github.com/Stedamb/smartplants"
     }, {
         name: "Solo irrigazione",
         description: "project3",
         image: bg,
-        source_code_link: "http://daleninbarbershop.it"
+        source_code_link: "https://github.com/Stedamb/smartplants"
     }
 ];
 
@@ -66,20 +70,17 @@ const footerLinks = [
     {
         links: [
             {
-                name: "Content",
-                link: "https://www.hoobank.com/content/"
+                name: "dashboard",
+                link: "/dashboard"
             }, {
-                name: "How it Works",
-                link: "https://www.hoobank.com/how-it-works/"
+                name: "dashboard_demo",
+                link: "/dashboard/demo"
             }, {
-                name: "Create",
-                link: "https://www.hoobank.com/create/"
+                name: "source_code",
+                link: "https://github.com/Stedamb/smartplants"
             }, {
-                name: "Explore",
-                link: "https://www.hoobank.com/explore/"
-            }, {
-                name: "Terms & Services",
-                link: "https://www.hoobank.com/terms-and-services/"
+                name: "firmware",
+                link: "https://github.com/Stedamb/smartplants/tree/main/firmware"
             }
         ]
     }

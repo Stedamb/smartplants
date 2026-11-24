@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
-import {motion, useAnimation} from "framer-motion";
+import {Link} from "react-router";
+import {motion, useAnimation} from "motion/react";
 import {useTranslation} from "react-i18next";
 
 import {styles} from "../styles";
@@ -143,7 +143,7 @@ const Navbar = () => {
                                 ? "text-white"
                                 : "text-gray-200"}`}
                                 onClick={() => setActive(nav.title)}>
-                                <a href={`#${nav.id}`}>{t(nav.id)}</a>
+                                <a href={nav.href ?? `#${nav.id}`}>{t(nav.id)}</a>
                             </li>
                         ))}
                     </ul>
@@ -235,7 +235,7 @@ const Navbar = () => {
                                     }
                                     setActive(nav.title);
                                 }}>
-                                    <a href={`#${nav.id}`}>{t(nav.id)}</a>
+                                    <a href={nav.href ?? `#${nav.id}`}>{t(nav.id)}</a>
                                 </li>
                             ))}
                         </ul>

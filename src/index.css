@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Space Grotesk:700|Poppins:400');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    --color-primary-color: var(--primary-color);
+    --color-secondary-color: var(--secondary-color);
+    --color-accent-color: var(--secondary-color);
+    --color-text-color: var(--secondary-color);
+    --color-background-color: var(--secondary-color);
+}
 
 :root {
     /* Realtime Colors */

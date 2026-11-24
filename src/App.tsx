@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router";
 import { About, Gallery, Hero, Navbar, Works, Contact, Footer } from "./components";
 
 import './i18n';
